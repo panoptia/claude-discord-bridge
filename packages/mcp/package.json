@@ -1,0 +1,26 @@
+{
+  "name": "@claude-discord-bridge/mcp",
+  "version": "0.1.0",
+  "type": "module",
+  "bin": {
+    "claude-discord-mcp": "dist/server.js"
+  },
+  "main": "dist/server.js",
+  "types": "dist/server.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start": "node dist/server.js",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@claude-discord-bridge/shared": "workspace:*",
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "discord.js": "^14.18.0",
+    "dotenv": "^16.4.0",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0"
+  }
+}

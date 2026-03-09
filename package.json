@@ -1,0 +1,19 @@
+{
+  "name": "claude-discord-bridge",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Bidirectional bridge between Claude Code and Discord — modular, open source",
+  "license": "MIT",
+  "packageManager": "pnpm@9.15.4",
+  "scripts": {
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "lint": "turbo lint",
+    "clean": "turbo clean"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "turbo": "^2.4.0",
+    "typescript": "^5.7.0"
+  }
+}

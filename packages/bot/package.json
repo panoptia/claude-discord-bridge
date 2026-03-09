@@ -1,0 +1,25 @@
+{
+  "name": "@claude-discord-bridge/bot",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "dist/bot.js",
+  "types": "dist/bot.d.ts",
+  "bin": {
+    "claude-discord-bot": "dist/bot.js",
+    "deploy-commands": "dist/deploy-commands.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "clean": "rm -rf dist",
+    "deploy-commands": "node dist/deploy-commands.js"
+  },
+  "dependencies": {
+    "@claude-discord-bridge/shared": "workspace:*",
+    "discord.js": "^14.18.0",
+    "dotenv": "^16.4.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0"
+  }
+}

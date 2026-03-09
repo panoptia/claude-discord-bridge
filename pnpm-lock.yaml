@@ -18,6 +18,35 @@ importers:
         specifier: ^5.7.0
         version: 5.9.3
 
+  packages/bot:
+    dependencies:
+      '@claude-discord-bridge/shared':
+        specifier: workspace:*
+        version: link:../shared
+      discord.js:
+        specifier: ^14.18.0
+        version: 14.25.1
+      dotenv:
+        specifier: ^16.4.0
+        version: 16.6.1
+    devDependencies:
+      typescript:
+        specifier: ^5.7.0
+        version: 5.9.3
+
+  packages/hooks:
+    dependencies:
+      '@claude-discord-bridge/shared':
+        specifier: workspace:*
+        version: link:../shared
+      dotenv:
+        specifier: ^16.4.0
+        version: 16.6.1
+    devDependencies:
+      typescript:
+        specifier: ^5.7.0
+        version: 5.9.3
+
   packages/mcp:
     dependencies:
       '@claude-discord-bridge/shared':

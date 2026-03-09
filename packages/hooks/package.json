@@ -1,0 +1,22 @@
+{
+  "name": "@claude-discord-bridge/hooks",
+  "version": "0.1.0",
+  "type": "module",
+  "bin": {
+    "claude-discord-hook": "dist/handler.js"
+  },
+  "main": "dist/handler.js",
+  "types": "dist/handler.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@claude-discord-bridge/shared": "workspace:*",
+    "dotenv": "^16.4.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0"
+  }
+}

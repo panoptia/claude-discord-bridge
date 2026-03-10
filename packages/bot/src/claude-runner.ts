@@ -53,7 +53,7 @@ export async function runClaude(
     const child = spawn("claude", ["-p"], {
       cwd,
       stdio: ["pipe", "pipe", "pipe"],
-      env: { ...process.env },
+      env: cleanEnv(),
     });
 
     const stdoutChunks: Buffer[] = [];
@@ -128,6 +128,12 @@ export async function runClaude(
     child.stdin.write(prompt);
     child.stdin.end();
   });
+}
+
+/** Build a clean env that won't trigger Claude Code's nesting guard. */
+function cleanEnv(): NodeJS.ProcessEnv {
+  const { CLAUDECODE, ...rest } = process.env;
+  return rest;
 }
 
 /** Truncate output to fit Discord's limits */
